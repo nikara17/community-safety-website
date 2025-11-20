@@ -1,17 +1,22 @@
-/* General */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f9;
-    color: #333;
+    background-color: #FFF9E5;
+    /* light yellow */
+    color: #000000;
+    /* black text */
+    line-height: 1.6;
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #1e3d59;
-    color: white;
+    background-color: #000000;
+    /* black */
+    color: #FFD700;
+    /* yellow */
     padding: 20px 0;
 }
 
@@ -20,9 +25,9 @@ header h1 {
 }
 
 nav a {
-    color: #ffdd00;
+    color: #FFD700;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
     font-weight: bold;
 }
 
@@ -32,82 +37,219 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #ff6e40;
-    color: white;
-    padding: 60px 20px;
+    background: linear-gradient(135deg, #FFD700, #FFC700);
+    /* yellow gradient */
+    color: #000000;
+    /* black text */
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .hero button {
     margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #1e3d59;
-    color: white;
+    padding: 14px 28px;
+    background-color: #000000;
+    /* black button */
+    color: #FFD700;
+    /* yellow text */
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .hero button:hover {
-    background-color: #16324b;
-}
-
-/* Sections */
-section {
-    margin: 50px auto;
-    padding: 30px 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    max-width: 900px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: #1e3d59;
-    margin-bottom: 20px;
+    background-color: #333333;
+    /* dark gray hover */
 }
 
 /* Features */
-.features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+#features {
+    padding: 60px 20px;
 }
 
-.feature {
-    flex: 1 1 250px;
-    background-color: #e8f1f8;
-    padding: 20px;
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: #FFFFFF;
+    /* white cards */
+    padding: 25px;
     border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    border: 2px solid #FFD700;
+    /* yellow border */
+}
+
+.feature-card.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card h3 {
+    color: #000000;
+}
+
+/* Alerts */
+#alerts {
+    background-color: #FFF9E5;
+    /* light yellow */
+    padding: 50px 20px;
+}
+
+.alerts-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+#alerts button {
+    margin-top: 20px;
+    background-color: #000000;
+    color: #FFD700;
+}
+
+#alerts button:hover {
+    background-color: #333333;
+}
+
+/* Alerts Severity Colors */
+.severity.high {
+    color: #FF8C00;
+    /* dark orange */
+    font-weight: bold;
+}
+
+.severity.medium {
+    color: #FFD700;
+    /* yellow */
+    font-weight: bold;
+}
+
+.severity.low {
+    color: #FFFF66;
+    /* pale yellow */
+    font-weight: bold;
+}
+
+/* Report Form */
+#report {
+    padding: 50px 20px;
+    background-color: #FFFFFF;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input,
+textarea,
+select {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #000000;
 }
 
 /* Buttons */
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #ff6e40;
+    background-color: #FFD700;
     border: none;
-    color: white;
+    color: #000000;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #ff3d00;
+    background-color: #FFC700;
 }
 
-/* Inputs */
-input,
-textarea {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Account Section */
+#account {
+    padding: 50px 20px;
+    background-color: #FFF9E5;
+}
+
+.account-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.account-card {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFD700;
+}
+
+/* Community Heroes */
+#heroes {
+    padding: 50px 20px;
+}
+
+.heroes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.hero-card {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    border: 2px solid #FFD700;
+}
+
+.hero-card.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Older Updates */
+#archives {
+    background-color: #FFF9E5;
+    padding: 50px 20px;
+}
+
+#archives ul {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 /* Footer */
 footer {
-    background-color: #1e3d59;
-    color: white;
-    padding: 25px 0;
+    background-color: #000000;
+    color: #FFD700;
+    padding: 30px 0;
 }

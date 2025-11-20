@@ -14,46 +14,58 @@
         <h1>Community Safety Portal</h1>
         <nav>
             <a href="#home">Home</a> |
-            <a href="#services">Services</a> |
+            <a href="#features">Features</a> |
             <a href="#alerts">Alerts</a> |
             <a href="#report">Report</a> |
+            <a href="#heroes">Community Heroes</a> |
+            <a href="#archives">Older Updates</a> |
+            <a href="#account">Account</a> |
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h2>Your Safety, Our Priority</h2>
-        <p>Empowering communities with real-time alerts and actionable safety information to keep neighborhoods secure.
-        </p>
-        <button id="learnMore">Learn More</button>
+        <h2>Keeping Your Community Safe</h2>
+        <p>Real-time alerts, actionable safety tips, and a platform for your reports — empowering communities to stay
+            secure.</p>
+        <button id="learnMore">Explore Features</button>
     </section>
 
-    <!-- Services / Features -->
-    <section id="services">
+    <!-- Features Section -->
+    <section id="features">
         <h2>Our Services</h2>
         <div class="features">
-            <div class="feature">
+            <div class="feature-card animate">
                 <h3>Real-Time Alerts</h3>
-                <p>Receive immediate notifications for incidents in your area, including theft, fire, and suspicious
-                    activity.</p>
+                <p>Instant notifications for incidents like theft, fire, or suspicious activity in your area.</p>
             </div>
-            <div class="feature">
+            <div class="feature-card animate">
                 <h3>Community Reports</h3>
-                <p>Submit safety reports directly from the portal. All reports are instantly reviewed by moderators for
-                    action.</p>
+                <p>Submit safety issues directly through our portal. Reports are reviewed immediately by moderators.</p>
             </div>
-            <div class="feature">
+            <div class="feature-card animate">
                 <h3>Safety Tips</h3>
-                <p>Get practical advice and tips to protect yourself and your neighbors from common safety threats.</p>
+                <p>Practical advice for protecting yourself and neighbors from common safety risks.</p>
             </div>
         </div>
     </section>
 
-    <!-- Alerts Section -->
+    <!-- Emergency Alerts Section -->
     <section id="alerts">
-        <h2>Test Alert System</h2>
-        <p>Click the button below to simulate an alert:</p>
+        <h2>Emergency Alerts</h2>
+        <ul class="alerts-list">
+            <li><strong>[Downtown]</strong> Fire reported — <span class="severity high">High</span></li>
+            <li><strong>[North Park]</strong> Suspicious activity — <span class="severity medium">Medium</span></li>
+            <li><strong>[Central Station]</strong> Theft reported — <span class="severity low">Low</span></li>
+        </ul>
+        <p>Select emergency type to simulate:</p>
+        <select id="emergencyType">
+            <option value="fire">Fire</option>
+            <option value="suspicious">Suspicious Activity</option>
+            <option value="theft">Theft</option>
+            <option value="medical">Medical</option>
+        </select>
         <button id="alertBtn">Send Test Alert</button>
         <p id="alertMessage"></p>
     </section>
@@ -68,6 +80,14 @@
             <label for="location">Location:</label><br>
             <input type="text" id="location" required><br><br>
 
+            <label for="emergency">Emergency Type:</label><br>
+            <select id="emergency">
+                <option value="fire">Fire</option>
+                <option value="suspicious">Suspicious Activity</option>
+                <option value="theft">Theft</option>
+                <option value="medical">Medical</option>
+            </select><br><br>
+
             <label for="issue">Issue Description:</label><br>
             <textarea id="issue" rows="4" required></textarea><br><br>
 
@@ -76,7 +96,65 @@
         <p id="formMessage"></p>
     </section>
 
-    <!-- Contact / Footer -->
+    <!-- Community Heroes Section -->
+    <section id="heroes">
+        <h2>Community Heroes</h2>
+        <div class="heroes">
+            <div class="hero-card animate">
+                <img src="https://via.placeholder.com/150" alt="Hero 1">
+                <p><strong>Jane D.</strong> helped evacuate residents during fire at Downtown Apartments.</p>
+            </div>
+            <div class="hero-card animate">
+                <img src="https://via.placeholder.com/150" alt="Hero 2">
+                <p><strong>Thabo M.</strong> reported suspicious activity that prevented theft at Central Market.</p>
+            </div>
+            <div class="hero-card animate">
+                <img src="https://via.placeholder.com/150" alt="Hero 3">
+                <p><strong>Linda K.</strong> assisted an injured person at North Park safely.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Older Updates Section -->
+    <section id="archives">
+        <h2>Older Updates</h2>
+        <ul class="alerts-list">
+            <li>[Oldtown] Road accident — Medium</li>
+            <li>[Eastside] Suspicious package — Low</li>
+            <li>[West Park] Minor fire alert — Low</li>
+        </ul>
+    </section>
+
+    <!-- Account Section -->
+    <section id="account">
+        <h2>Create an Account / Login</h2>
+        <div class="account-container">
+            <!-- Create Account -->
+            <div class="account-card">
+                <h3>Create Account</h3>
+                <form id="signupForm">
+                    <input type="text" id="signupName" placeholder="Full Name" required><br><br>
+                    <input type="email" id="signupEmail" placeholder="Email" required><br><br>
+                    <input type="password" id="signupPassword" placeholder="Password" required><br><br>
+                    <button type="submit">Sign Up</button>
+                    <p id="signupMessage"></p>
+                </form>
+            </div>
+
+            <!-- Login -->
+            <div class="account-card">
+                <h3>Login</h3>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email" required><br><br>
+                    <input type="password" id="loginPassword" placeholder="Password" required><br><br>
+                    <button type="submit">Login</button>
+                    <p id="loginMessage"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Footer -->
     <footer id="contact">
         <h2>Contact Us</h2>
         <p>Email: support@communitysafety.org | Phone: +27 11 123 4567</p>
